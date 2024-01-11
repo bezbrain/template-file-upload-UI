@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { FiUploadCloud } from "react-icons/fi";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label htmlFor="fileId">
+        <h2>Upload File</h2>
+        <FiUploadCloud className="upload__icon" />
+        <p>Must not be more than 100kb</p>
+      </label>
+      <input type="file" id="fileId" />
     </div>
   );
 }
